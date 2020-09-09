@@ -10,9 +10,9 @@ function App() {
             <Link href='/about'>
                 <a>About</a>
             </Link>
-            <GetLink title={'Page 1'} />
-            <GetLink title={'Page 2'} />
-            <GetLink title={'Page 3'} />
+            <GetLink title={'Page 1'} shortUrl={'page-1'} />
+            <GetLink title={'Page 2'} shortUrl={'page-3'} />
+            <GetLink title={'Page 3'} shortUrl={'page-3'} />
         </div>
     )
 }
