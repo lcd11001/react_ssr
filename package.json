@@ -4,17 +4,27 @@
   "description": "Using React.js + Next.js to create server side rendering app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "next"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lcd11001/react_ssr.git"
   },
-  "keywords": ["React.js", "Next.js", "SSR"],
+  "keywords": [
+    "React.js",
+    "Next.js",
+    "SSR"
+  ],
   "author": "Luong Cong Dan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lcd11001/react_ssr/issues"
   },
-  "homepage": "https://github.com/lcd11001/react_ssr#readme"
+  "homepage": "https://github.com/lcd11001/react_ssr#readme",
+  "dependencies": {
+    "next": "^9.5.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
