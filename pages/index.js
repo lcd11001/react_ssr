@@ -2,37 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 
 import GetLink from '../SharedComponents/DynamicRouter'
+import '../style.css'
 
 function App() {
     return (
         <div>
-            <style jsx global>
-                {`
-                    a {
-                        color: blue;
-                    }
-                    .img {
-                        width: 64px;
-                        height: 64px;
-                        background-size: cover !important;
-                        background-repeat: no-repeat !important;
-                        background-position: center !important;
-                        border: 1px solid black;
-                        border-radius: 10px;
-                        display: inline-block;
-                        margin-top: 10px;
-                    }
-                    .p1 {
-                        background: url(/Icons/angry.png)
-                    }
-                    .p2 {
-                        background: url(/Icons/happy.png)
-                    }
-                    .p3 {
-                        background: url(/Icons/love.png)
-                    }
-                `}
-            </style>
             <p>Hello from Next.js</p>
             <Link href='/about'>
                 <a>About</a>
