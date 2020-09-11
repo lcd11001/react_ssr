@@ -2,6 +2,11 @@ a {
     color: blue;
 }
 
+body div h1 {
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
 .img {
     width: 64px;
     height: 64px;
@@ -24,4 +29,25 @@ a {
 
 .p3 {
     background: url(/Icons/love.png)
+}
+
+.UserBlock {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px;
+    width: 255px;
+}
+
+.UserDetail {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.UserError {
+    color: red;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
 }
