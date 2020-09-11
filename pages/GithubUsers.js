@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import '../style.css'
+import Link from 'next/link'
 
 export default class extends React.Component {
     static async getInitialProps() {
@@ -32,11 +33,20 @@ export default class extends React.Component {
                 {
                     this.props.data.map((item, index) => (
                         <div key={index} className={'UserBlock'}>
-                            <img className={'img'} src={item.avatar_url} alt={'user icon'} />
-                            <div className={'UserDetail'}>
-                                <p>Username: {item.login}</p>
-                                <p>ID: {item.id}</p>
-                            </div>
+                            <Link href={{
+                                pathname: '/GithubUser',
+                                query: {
+                                    id: item.login
+                                }
+                            }}>
+                                <div>
+                                    <img className={'img'} src={item.avatar_url} alt={'user icon'} />
+                                    <div className={'UserDetail'}>
+                                        <p>Username: {item.login}</p>
+                                        <p>ID: {item.id}</p>
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
                     ))
                 }
