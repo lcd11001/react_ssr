@@ -3,16 +3,14 @@ import '../style.css'
 
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { changeState } from '../Actions/action'
+import { changeState, InitialState } from '../Actions/action'
 
 class ReduxDemo extends React.Component {
-    // static getInitialProps({store}) {
-        
-    // }
-
-    // constructor(props) {
-    //     super(props)
-    // }
+    static async getInitialProps(ctx) {
+        return {
+            initialState: InitialState
+        }
+    }
 
     render() {
         return (
@@ -21,12 +19,12 @@ class ReduxDemo extends React.Component {
                 <br />
                 <div className={'center'}>
                     <input id='inputTextbox' type='text' />
-                    <button type='button' onClick={this.props.changeState}>
+                    <button type='button' onClick={() => this.props.changeState(document.getElementById('inputTextbox').value)}>
                         Update label
                     </button>
                 </div>
                 <br />
-                <p>{this.state.text}</p>
+                <p>{this.props.text}</p>
             </div>
         )
     }
@@ -38,8 +36,12 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-const mapStateToProps = state => ({
-    text: state.text
-})
+const mapStateToProps = state => {
+    // console.log('mapStateToProps', state)
+    return ({
+        text: state.text
+    })
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReduxDemo)
+// export default ReduxDemo

@@ -2,9 +2,9 @@ export const InitialState = {
     text: 'Initial label value'
 }
 
-export const changeState = () => dispatch => {
+export const changeState = (newText) => dispatch => {
     return dispatch({
         type: 'ChangeLabel',
-        text: document.getElementById('inputTextbox').value
+        text: newText
     })
 }
