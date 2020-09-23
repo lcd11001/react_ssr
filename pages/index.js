@@ -36,7 +36,11 @@ function App(props) {
 
 
 App.getInitialProps = async (ctx) => {
-    const res = await axios.get('http://localhost:3000/api/TestAPI')
+    const res = await axios.post('http://localhost:3000/api/TestAPI', {
+        data: {
+            query: `{ name, address }`
+        }
+    })
     try {
 
         return {
