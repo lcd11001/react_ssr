@@ -5,7 +5,7 @@ import axios from 'axios'
 import GetLink from '../SharedComponents/DynamicRouter'
 import '../style.css'
 
-function App() {
+function App(props) {
     return (
         <div>
             <p>Hello from Next.js</p>
@@ -22,10 +22,10 @@ function App() {
 
             <table>
                 {
-                    Object.keys(this.props.data).map((key, index) => (
+                    Object.keys(props.data).map((key, index) => (
                         <tr key={index}>
                             <td>{key}:</td>
-                            <td>{this.props.data[key]}</td>
+                            <td>{props.data[key]}</td>
                         </tr>
                     ))
                 }
@@ -33,6 +33,7 @@ function App() {
         </div>
     )
 }
+
 
 App.getInitialProps = async (ctx) => {
     const res = await axios.get('http://localhost:3000/api/TestAPI')
@@ -49,5 +50,16 @@ App.getInitialProps = async (ctx) => {
         }
     }
 }
+
+
+// export async function getServerSideProps() {
+//     const res = await axios.get('http://localhost:3000/api/TestAPI')
+//     const data = await res.data
+//     return {
+//         props: {
+//             data
+//         }
+//     }
+// }
 
 export default App
