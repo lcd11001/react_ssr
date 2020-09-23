@@ -16,7 +16,7 @@ function App() {
                 <a>Redux Demo</a>
             </Link>
             <GetLink title={'Page 1'} shortUrl={'page-1'} className={'img p1'} />
-            <GetLink title={'Page 2'} shortUrl={'page-3'} className={'img p2'} />
+            <GetLink title={'Page 2'} shortUrl={'page-2'} className={'img p2'} />
             <GetLink title={'Page 3'} shortUrl={'page-3'} className={'img p3'} />
         </div>
     )
