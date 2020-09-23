@@ -1,7 +1,7 @@
 import { withRouter } from 'next/router'
 
 const SecondPage = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <h1>
             Welcome to {props.router.query.content}

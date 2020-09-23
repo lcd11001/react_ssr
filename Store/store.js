@@ -18,4 +18,4 @@ export const initStore = (initialState = InitialState) => {
     return store
 }
 
-export const wrapper = createWrapper(initStore, { debug: process.env.NODE_ENV === 'development' })
+export const wrapper = createWrapper(initStore, { debug: false /*process.env.NODE_ENV === 'development'*/ })
